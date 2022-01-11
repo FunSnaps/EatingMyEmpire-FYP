@@ -1434,11 +1434,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Server\\EatingMyEmpire.Server.csproj",
+      "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Server\\EatingMyEmpire.Server.csproj",
       "projectName": "EatingMyEmpire.Server",
-      "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Server\\EatingMyEmpire.Server.csproj",
+      "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Server\\EatingMyEmpire.Server.csproj",
       "packagesPath": "C:\\Users\\Enrique\\.nuget\\packages\\",
-      "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Server\\obj\\",
+      "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Enrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1455,11 +1455,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj": {
-              "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj"
+            "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj": {
+              "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj"
             },
-            "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
-              "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj"
+            "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
+              "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj"
             }
           }
         }

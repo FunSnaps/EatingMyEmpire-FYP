@@ -11,10 +11,9 @@ namespace EatingMyEmpire.Client.Pages
     {
         public IEnumerable<Recipe> Recipes { get; set; }
 
-        protected override Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
-            LoadSampleRecipes();
-            return base.OnInitializedAsync();
+            await Task.Run(LoadSampleRecipes);
         }
 
         private void LoadSampleRecipes()
@@ -35,7 +34,7 @@ namespace EatingMyEmpire.Client.Pages
 
             Recipe r3 = new Recipe
             {
-                RecipeName = "Chicken TikkaMasala",
+                RecipeName = "Chicken Tikka Masala",
                 RecipeDescription = "England's national food",
                 PhotoPath = "images/Chicken-Tikka-Masala.jpg"
             };

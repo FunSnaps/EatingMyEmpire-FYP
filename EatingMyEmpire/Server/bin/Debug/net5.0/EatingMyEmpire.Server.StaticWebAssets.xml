@@ -1,5 +1,5 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="E:\Uni\UniDocs\Year3\FYP\WebApp\EME\EatingMyEmpire\EatingMyEmpire\Client\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="E:\Uni\UniDocs\Year3\FYP\WebApp\EME\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="/" Path="E:\Uni\UniDocs\Year3\FYP\WebApp\EME\EatingMyEmpire\EatingMyEmpire\Client\wwwroot\" />
+  <ContentRoot BasePath="/" Path="E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\wwwroot\" />
 </StaticWebAssets>

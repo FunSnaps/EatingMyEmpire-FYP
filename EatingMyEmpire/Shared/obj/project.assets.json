@@ -831,11 +831,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
+      "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
       "projectName": "EatingMyEmpire.Shared",
-      "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
+      "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
       "packagesPath": "C:\\Users\\Enrique\\.nuget\\packages\\",
-      "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\obj\\",
+      "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Enrique\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CeGlMzfWthTcfwdBjS3RgLM08XM8CTglseIS4d3JNMIuCqjVejoR6fpqr4tqN7WWH/LaTinr+4JAeFh97xEHCw==",
+  "dgSpecHash": "b5CpbTQrkDb4/BN/LAInjQrAkxRkp/9R3PuoJECQwyKNGD71Vt0hV1V0RczSUfUNya1PPWGQWr8Yjqlp9J4nMQ==",
   "success": true,
-  "projectFilePath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Server\\EatingMyEmpire.Server.csproj",
+  "projectFilePath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Server\\EatingMyEmpire.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Enrique\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Enrique\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.11\\microsoft.aspnetcore.authorization.5.0.11.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj": {}
+    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj": {}
   },
   "projects": {
-    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj": {
+    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj",
+        "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj",
         "projectName": "EatingMyEmpire.Client",
-        "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj",
+        "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\EatingMyEmpire.Client.csproj",
         "packagesPath": "C:\\Users\\Enrique\\.nuget\\packages\\",
-        "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Client\\obj\\",
+        "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Enrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
-                "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj"
+              "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
+                "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj"
               }
             }
           }
@@ -98,14 +98,14 @@
         }
       }
     },
-    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
+    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
+        "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
         "projectName": "EatingMyEmpire.Shared",
-        "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
+        "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
         "packagesPath": "C:\\Users\\Enrique\\.nuget\\packages\\",
-        "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EME\\EatingMyEmpire\\EatingMyEmpire\\Shared\\obj\\",
+        "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Enrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
