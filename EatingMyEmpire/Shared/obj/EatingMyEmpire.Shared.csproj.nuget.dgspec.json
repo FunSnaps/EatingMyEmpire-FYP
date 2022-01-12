@@ -44,7 +44,7 @@
               "target": "Package",
               "version": "[5.0.13, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.13, )"
             },

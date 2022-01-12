@@ -27,5 +27,7 @@ namespace EatingMyEmpire.Shared
 
         [ForeignKey("IngredientId")]
         public Ingredient Ingredient { get; set; }
+
+        public int AmountRequired { get; set; }
     }
 }
