@@ -24,6 +24,30 @@ namespace EatingMyEmpire.Api.Models
             {
                 foreignkey.DeleteBehavior = DeleteBehavior.Restrict;
             }
+
+            modelBuilder.Entity<Shared.Recipe>().HasData(new Shared.Recipe
+            {
+                id = 1,
+                RecipeName = "Adobo",
+                RecipeDescription = "Philippine's national food",
+                PhotoPath = "images/adobo.jpg"
+            });
+
+            modelBuilder.Entity<Shared.Recipe>().HasData(new Shared.Recipe
+            {
+                id = 2,
+                RecipeName = "Sizzling Sisig",
+                RecipeDescription = "My Favourite pinoy dish!",
+                PhotoPath = "images/Sizzling-Sisig.jpg"
+            });
+
+            modelBuilder.Entity<Shared.Recipe>().HasData(new Shared.Recipe
+            {
+                id = 3,
+                RecipeName = "Chicken Tikka Masala",
+                RecipeDescription = "England's national food",
+                PhotoPath = "images/Chicken-Tikka-Masala.jpg"
+            });
         }
 
         public DbSet<MenuType> MenuType { get; set; }

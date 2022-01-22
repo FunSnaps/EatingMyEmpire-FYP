@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EatingMyEmpire.Client.Pages
 {
-    public class RecipeListBase : ComponentBase
+    public class RecipeListBase : ComponentBase 
     {
         public IEnumerable<Recipe> Recipes { get; set; }
 
