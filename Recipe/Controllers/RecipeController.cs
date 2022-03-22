@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace EatingMyEmpire.Api.Controllers
@@ -15,7 +17,7 @@ namespace EatingMyEmpire.Api.Controllers
         public RecipeController(IRecipeRepository recipeRepository)
         {
             this.recipeRepository = recipeRepository;
-        } 
+        }
 
         [HttpGet]
         public async Task<ActionResult> GetRecipes()
@@ -35,7 +37,7 @@ namespace EatingMyEmpire.Api.Controllers
         {
             try
             {
-               var result = await recipeRepository.GetRecipe(id);
+                var result = await recipeRepository.GetRecipe(id);
 
                 if (result == null)
                 {
@@ -47,6 +49,26 @@ namespace EatingMyEmpire.Api.Controllers
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error getting data from the database!");
+            }
+        }
+
+        [HttpGet("{search}")]
+        public async Task<ActionResult<IEnumerable<Shared.Recipe>>> Search(string RecipeName, string RecipeDescription)
+        {
+            try
+            {
+                var result = await recipeRepository.Search(RecipeName, RecipeDescription);
+
+                if (result.Any())
+                {
+                    return Ok(result );
+                }
+
+                return NotFound("This recipe does not exist!");
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database!");
             }
         }
 
@@ -107,5 +129,26 @@ namespace EatingMyEmpire.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error updating data!");
             }
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<Shared.Recipe>> DeleteRecipe(int id)
+        {
+            try
+            {
+                var recipeToDelete = await recipeRepository.GetRecipe(id);
+
+                if (recipeToDelete == null)
+                {
+                    return NotFound($"Recipe with ID: {id} was not found!");
+                }
+
+                return await recipeRepository.DeleteRecipe(id);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data from the database!");
+            }
+        }
+
     }
 }
