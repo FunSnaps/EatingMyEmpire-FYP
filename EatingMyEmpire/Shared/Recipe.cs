@@ -14,10 +14,14 @@ namespace EatingMyEmpire.Shared
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
+        [Required]
+        [MinLength(3)]
         public string RecipeName { get; set; }
 
+        [Required]
         public string RecipeDescription { get; set; }
 
+        [Required]
         public string PhotoPath { get; set; }
 
         /*public int PhotoId { get; set; }

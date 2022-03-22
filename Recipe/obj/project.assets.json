@@ -1616,18 +1616,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "EatingMyEmpire.Shared/1.0.0": {
+      "EatingMyEmpire.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
+          "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/EatingMyEmpire.Shared.dll": {}
+          "bin/placeholder/EatingMyEmpire.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/EatingMyEmpire.Shared.dll": {}
+          "bin/placeholder/EatingMyEmpire.Models.dll": {}
         }
       }
     }
@@ -6050,18 +6051,19 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "EatingMyEmpire.Shared/1.0.0": {
+    "EatingMyEmpire.Models/1.0.0": {
       "type": "project",
-      "path": "../EatingMyEmpire/Shared/EatingMyEmpire.Shared.csproj",
-      "msbuildProject": "../EatingMyEmpire/Shared/EatingMyEmpire.Shared.csproj"
+      "path": "../EatingMyEmpire/Shared/EatingMyEmpire.Models.csproj",
+      "msbuildProject": "../EatingMyEmpire/Shared/EatingMyEmpire.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "EatingMyEmpire.Shared >= 1.0.0",
+      "EatingMyEmpire.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.13",
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "System.ComponentModel.Annotations >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -6091,8 +6093,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
-              "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj"
+            "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj": {
+              "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj"
             }
           }
         }
@@ -6120,6 +6122,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"
+          },
+          "System.ComponentModel.Annotations": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           }
         },
         "imports": [
@@ -6140,7 +6146,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -4,12 +4,12 @@
     "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\Recipe\\EatingMyEmpire.Api.csproj": {}
   },
   "projects": {
-    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
+    "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
-        "projectName": "EatingMyEmpire.Shared",
-        "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
+        "projectUniqueName": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj",
+        "projectName": "EatingMyEmpire.Models",
+        "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj",
         "packagesPath": "C:\\Users\\Enrique\\.nuget\\packages\\",
         "outputPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\obj\\",
         "projectStyle": "PackageReference",
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.13, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -70,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -98,8 +102,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj": {
-                "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj"
+              "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj": {
+                "projectPath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj"
               }
             }
           }
@@ -127,6 +131,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -147,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

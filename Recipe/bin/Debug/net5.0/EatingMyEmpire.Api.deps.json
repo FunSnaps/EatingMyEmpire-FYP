@@ -33,10 +33,11 @@
     ".NETCoreApp,Version=v5.0": {
       "EatingMyEmpire.Api/1.0.0": {
         "dependencies": {
-          "EatingMyEmpire.Shared": "1.0.0",
+          "EatingMyEmpire.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.13",
           "Swashbuckle.AspNetCore": "5.6.3",
+          "System.ComponentModel.Annotations": "5.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -1414,16 +1415,17 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "EatingMyEmpire.Shared/1.0.0": {
+      "EatingMyEmpire.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
+          "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
-          "EatingMyEmpire.Shared.dll": {}
+          "EatingMyEmpire.Models.dll": {}
         },
         "compile": {
-          "EatingMyEmpire.Shared.dll": {}
+          "EatingMyEmpire.Models.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3837,7 +3839,7 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "EatingMyEmpire.Shared/1.0.0": {
+    "EatingMyEmpire.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

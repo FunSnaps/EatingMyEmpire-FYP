@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P215jpyMK85SHwIyrqxdzD5yGy1KLdkKksb1zV24d4KnkVRKqXpL9EBcGXvRq8zabRWqNkEuhEXTRyqOdw7F1A==",
+  "dgSpecHash": "OppK+C+GlHIgQBPVfiryQXMU/KcLNeV2/D8yutbMJWL7qhlWUWaiqZpalmeumKRHPPM4Mxt/AkszzXBKkmJfmQ==",
   "success": true,
-  "projectFilePath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Shared.csproj",
+  "projectFilePath": "E:\\Uni\\UniDocs\\Year3\\FYP\\WebApp\\EatingMyEmpire\\EatingMyEmpire\\Shared\\EatingMyEmpire.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Enrique\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Enrique\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.13\\microsoft.aspnetcore.http.features.5.0.13.nupkg.sha512",

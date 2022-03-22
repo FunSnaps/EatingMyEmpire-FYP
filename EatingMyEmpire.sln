@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatingMyEmpire.Server", "Ea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatingMyEmpire.Client", "EatingMyEmpire\Client\EatingMyEmpire.Client.csproj", "{8EC392CF-7942-4A30-B72A-2F880708AC71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatingMyEmpire.Shared", "EatingMyEmpire\Shared\EatingMyEmpire.Shared.csproj", "{082F7289-57D6-4997-BF46-DE905F32C051}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatingMyEmpire.Models", "EatingMyEmpire\Shared\EatingMyEmpire.Models.csproj", "{082F7289-57D6-4997-BF46-DE905F32C051}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatingMyEmpire.Api", "Recipe\EatingMyEmpire.Api.csproj", "{4AD4B67D-A7B8-4D8C-9AF5-C8C77B0B25D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatingMyEmpire.Api", "Recipe\EatingMyEmpire.Api.csproj", "{4AD4B67D-A7B8-4D8C-9AF5-C8C77B0B25D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,15 @@
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\bin\Debug\net5.0\EatingMyEmpire.Models.deps.json
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\bin\Debug\net5.0\EatingMyEmpire.Models.runtimeconfig.json
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\bin\Debug\net5.0\EatingMyEmpire.Models.runtimeconfig.dev.json
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\bin\Debug\net5.0\EatingMyEmpire.Models.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\bin\Debug\net5.0\ref\EatingMyEmpire.Models.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\bin\Debug\net5.0\EatingMyEmpire.Models.pdb
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.AssemblyInfoInputs.cache
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.AssemblyInfo.cs
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.csproj.CoreCompileInputs.cache
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\ref\EatingMyEmpire.Models.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.pdb
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.genruntimeconfig.cache
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.csproj.AssemblyReference.cache

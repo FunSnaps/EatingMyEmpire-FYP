@@ -34,7 +34,7 @@
       "EatingMyEmpire.Server/1.0.0": {
         "dependencies": {
           "EatingMyEmpire.Client": "1.0.0",
-          "EatingMyEmpire.Shared": "1.0.0",
+          "EatingMyEmpire.Models": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.13",
@@ -1527,7 +1527,7 @@
       },
       "EatingMyEmpire.Client/1.0.0": {
         "dependencies": {
-          "EatingMyEmpire.Shared": "1.0.0",
+          "EatingMyEmpire.Models": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
           "System.Net.Http.Json": "5.0.0"
@@ -1539,16 +1539,16 @@
           "EatingMyEmpire.Client.dll": {}
         }
       },
-      "EatingMyEmpire.Shared/1.0.0": {
+      "EatingMyEmpire.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13"
         },
         "runtime": {
-          "EatingMyEmpire.Shared.dll": {}
+          "EatingMyEmpire.Models.dll": {}
         },
         "compile": {
-          "EatingMyEmpire.Shared.dll": {}
+          "EatingMyEmpire.Models.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4015,7 +4015,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EatingMyEmpire.Shared/1.0.0": {
+    "EatingMyEmpire.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -11,11 +11,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Client\EatingMyEmpire.Client.csproj" />
-    <ProjectReference Include="..\Shared\EatingMyEmpire.Shared.csproj" />
+    <ProjectReference Include="..\Shared\EatingMyEmpire.Models.csproj" />
   </ItemGroup>
 
 

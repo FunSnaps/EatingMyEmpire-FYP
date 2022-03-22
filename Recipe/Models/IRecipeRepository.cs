@@ -7,10 +7,11 @@ namespace EatingMyEmpire.Api.Models
 {
     public interface IRecipeRepository
     {
-        Task<IEnumerable<EatingMyEmpire.Shared.Recipe>> GetRecipes();
-        Task<EatingMyEmpire.Shared.Recipe> GetRecipe(int RecipeId);
-        Task<EatingMyEmpire.Shared.Recipe> AddRecipe(EatingMyEmpire.Shared.Recipe Recipe);
-        Task<EatingMyEmpire.Shared.Recipe> UpdateRecipe(EatingMyEmpire.Shared.Recipe Recipe);
+        Task<IEnumerable<Shared.Recipe>> GetRecipes();
+        Task<Shared.Recipe> GetRecipe(int RecipeId);
+        Task<Shared.Recipe> GetRecipeByName(string RecipeName);
+        Task<Shared.Recipe> AddRecipe(Shared.Recipe Recipe);
+        Task<Shared.Recipe> UpdateRecipe(Shared.Recipe Recipe);
         void DeleteRecipe(int RecipeId);
     }
 }

@@ -108,9 +108,7 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\System.IO.Pipelines.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\EatingMyEmpire.Client.dll
-E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\EatingMyEmpire.Shared.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\EatingMyEmpire.Client.pdb
-E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\EatingMyEmpire.Shared.pdb
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\obj\Debug\net5.0\EatingMyEmpire.Server.csproj.AssemblyReference.cache
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\obj\Debug\net5.0\EatingMyEmpire.Server.GeneratedMSBuildEditorConfig.editorconfig
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\obj\Debug\net5.0\EatingMyEmpire.Server.AssemblyInfoInputs.cache
@@ -159,3 +157,5 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\EatingMyEmpire.Models.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Server\bin\Debug\net5.0\EatingMyEmpire.Models.pdb

@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EatingMyEmpire.Api.Controllers
@@ -20,7 +18,7 @@ namespace EatingMyEmpire.Api.Controllers
         } 
 
         [HttpGet]
-        public async Task<ActionResult> GetRecipe()
+        public async Task<ActionResult> GetRecipes()
         {
             try
             {
@@ -28,7 +26,85 @@ namespace EatingMyEmpire.Api.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error getting data from database!");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error getting data from the database!");
+            }
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Shared.Recipe>> GetRecipe(int id)
+        {
+            try
+            {
+               var result = await recipeRepository.GetRecipe(id);
+
+                if (result == null)
+                {
+                    return NotFound();
+                }
+
+                return result;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error getting data from the database!");
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Shared.Recipe>> CreateRecipe(Shared.Recipe recipe)
+        {
+            try
+            {
+                if (recipe == null)
+                {
+                    return BadRequest();
+                }
+
+                var rec = await recipeRepository.GetRecipeByName(recipe.RecipeName);
+
+                //Validation error
+                if (rec != null)
+                {
+                    ModelState.AddModelError("RecipeName", "Recipe already Exists!");
+                    return BadRequest(ModelState);
+                }
+
+                var createdRecipe = await recipeRepository.AddRecipe(recipe);
+
+                //Anonymous object
+                return CreatedAtAction(nameof(GetRecipe), new { id = createdRecipe.id}, createdRecipe);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database!");
+            }
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<Shared.Recipe>> UpdateRecipe(int id, Shared.Recipe recipe)
+        {
+            try
+            { 
+                if (id != recipe.id)
+                {
+                    return BadRequest("Recipe ID mismatch!");
+                }
+
+                var recipeToUpdate = await recipeRepository.GetRecipe(id);
+
+                if (recipeToUpdate == null)
+                {
+                    return NotFound($"Recipe with ID: {id} was not found!");
+                }
+                else
+                {
+                    return await recipeRepository.UpdateRecipe(recipe);
+                }
+                
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error updating data!");
             }
         }
     }

@@ -11,10 +11,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EatingMyEmpire\Shared\EatingMyEmpire.Shared.csproj" />
+    <ProjectReference Include="..\EatingMyEmpire\Shared\EatingMyEmpire.Models.csproj" />
   </ItemGroup>
 
 </Project>
