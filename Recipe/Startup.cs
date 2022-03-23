@@ -33,6 +33,14 @@ namespace Recipe
             services.AddScoped<IIngredientRepository, IngredientRepository>();
             services.AddControllers();
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                builder.WithOrigins("*")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader());
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Recipe", Version = "v1" });
@@ -52,6 +60,8 @@ namespace Recipe
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

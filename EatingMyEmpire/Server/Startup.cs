@@ -1,3 +1,4 @@
+using EatingMyEmpire.Client.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +26,10 @@ namespace EatingMyEmpire.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            /*services.AddHttpClient<IRecipeService, RecipeService>(recipe =>
+            {
+                recipe.BaseAddress = new System.Uri("https://localhost:44311/");
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
