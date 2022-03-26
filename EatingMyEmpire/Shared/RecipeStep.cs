@@ -13,12 +13,11 @@ namespace EatingMyEmpire.Shared
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
+        
+        [Required]
+        public string Ingredients { get; set; } 
 
-        public int RecipeId { get; set; }
-
+        [Required]
         public string Instructions { get; set; }
-
-        [ForeignKey("RecipeId")]
-        public Recipe Recipe { get; set; }
     }
 }

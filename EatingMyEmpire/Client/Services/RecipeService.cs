@@ -16,10 +16,15 @@ namespace EatingMyEmpire.Client.Services
         {
             this.httpClient = httpClient;
         }
-        
+
+        public async Task<Recipe> GetRecipe(int id)
+        {
+            return await httpClient.GetFromJsonAsync<Recipe>($"api/recipe/{id}");
+        }
+
         public async Task<IEnumerable<Recipe>> GetRecipes()
         {         
-            return await httpClient.GetFromJsonAsync<Recipe[]>("https://localhost:44311/api/recipe");
+            return await httpClient.GetFromJsonAsync<Recipe[]>("api/recipe");
         }
     }
 }

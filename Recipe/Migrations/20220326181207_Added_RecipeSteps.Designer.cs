@@ -3,14 +3,16 @@ using EatingMyEmpire.Api.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EatingMyEmpire.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220326181207_Added_RecipeSteps")]
+    partial class Added_RecipeSteps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,32 +144,6 @@ namespace EatingMyEmpire.Api.Migrations
                     b.HasIndex("RecipeStepId");
 
                     b.ToTable("Recipe");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            PhotoPath = "images/adobo.jpg",
-                            RecipeDescription = "Chicken Adobo is a type of Filipino chicken stew. Chicken pieces are marinated in soy sauce and spices, pan-fried, and stewed until tender. The dish gained popularity because of its delicious taste and ease in preparation.",
-                            RecipeName = "Adobo",
-                            RecipeStepId = 1
-                        },
-                        new
-                        {
-                            id = 2,
-                            PhotoPath = "images/Sizzling-Sisig.jpg",
-                            RecipeDescription = "Sizzling Crispy Sisig is a great dish to prepare during Christmas dinner or in any special occasion. It has a nice texture and the flavor is out-of-this-world. I enjoy having it for dinner with a cup of white rice. It can also be served as an appetizer along with a cold bottle or glass of your favorite drink.",
-                            RecipeName = "Sizzling Sisig",
-                            RecipeStepId = 2
-                        },
-                        new
-                        {
-                            id = 3,
-                            PhotoPath = "images/Chicken-Tikka-Masala.jpg",
-                            RecipeDescription = "This rich and creamy flavoursome Chicken tikka rivals any Indian restaurant! Why go out when you can make it better at home! With aromatic golden chicken pieces swimming in an incredible curry sauce, this Chicken Tikka Masala recipe is one of the best you will try! Pair it with our buttery garlic naan breads!",
-                            RecipeName = "Chicken Tikka Masala",
-                            RecipeStepId = 3
-                        });
                 });
 
             modelBuilder.Entity("EatingMyEmpire.Shared.RecipeStep", b =>

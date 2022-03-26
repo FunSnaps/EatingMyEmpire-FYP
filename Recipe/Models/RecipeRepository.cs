@@ -39,7 +39,9 @@ namespace EatingMyEmpire.Api.Models
 
         public async Task<Shared.Recipe> GetRecipe(int RecipeId)
         {
-            return await applicationDbContext.Recipe.FirstOrDefaultAsync(e => e.id == RecipeId);
+            return await applicationDbContext.Recipe
+                .Include(e => e.RecipeStep)
+                .FirstOrDefaultAsync(e => e.id == RecipeId);
         }
 
         public async Task<Shared.Recipe> GetRecipeByName(string RecipeName)
@@ -67,6 +69,7 @@ namespace EatingMyEmpire.Api.Models
         public async Task<IEnumerable<Shared.Recipe>> GetRecipes()
         {
             return await applicationDbContext.Recipe.ToListAsync();
+
         }
 
         public async Task<IEnumerable<Shared.Recipe>> Search(string RecipeName, string RecipeDescription)

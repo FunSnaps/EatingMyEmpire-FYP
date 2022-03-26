@@ -21,8 +21,13 @@ namespace EatingMyEmpire.Shared
         [Required]
         public string RecipeDescription { get; set; }
 
+        public int RecipeStepId { get; set; }
+
         [Required]
         public string PhotoPath { get; set; }
+
+        [ForeignKey("RecipeStepId")]
+        public RecipeStep RecipeStep { get; set; }
 
         /*public int PhotoId { get; set; }
 

@@ -9,5 +9,6 @@ namespace EatingMyEmpire.Client.Services
     public interface IRecipeService
     {
         Task<IEnumerable<Recipe>> GetRecipes();
+        Task<Recipe> GetRecipe(int id); 
     }
 }

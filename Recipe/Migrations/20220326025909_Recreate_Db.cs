@@ -2,7 +2,7 @@
 
 namespace EatingMyEmpire.Api.Migrations
 {
-    public partial class Initial_Creation : Migration
+    public partial class Recreate_Db : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,18 +33,16 @@ namespace EatingMyEmpire.Api.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Recipe",
+                name: "RecipeStep",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RecipeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipeDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PhotoPath = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Instructions = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Recipe", x => x.id);
+                    table.PrimaryKey("PK_RecipeStep", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -63,7 +61,8 @@ namespace EatingMyEmpire.Api.Migrations
                         name: "FK_Ingredient_IngredientType_IngredientTypeId",
                         column: x => x.IngredientTypeId,
                         principalTable: "IngredientType",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -83,26 +82,30 @@ namespace EatingMyEmpire.Api.Migrations
                         name: "FK_SuggestedMenu_MenuType_MenuTypeId",
                         column: x => x.MenuTypeId,
                         principalTable: "MenuType",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "RecipeStep",
+                name: "Recipe",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RecipeId = table.Column<int>(type: "int", nullable: false),
-                    Instructions = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    RecipeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecipeDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecipeStepId = table.Column<int>(type: "int", nullable: false),
+                    PhotoPath = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RecipeStep", x => x.id);
+                    table.PrimaryKey("PK_Recipe", x => x.id);
                     table.ForeignKey(
-                        name: "FK_RecipeStep_Recipe_RecipeId",
-                        column: x => x.RecipeId,
-                        principalTable: "Recipe",
-                        principalColumn: "id");
+                        name: "FK_Recipe_RecipeStep_RecipeStepId",
+                        column: x => x.RecipeStepId,
+                        principalTable: "RecipeStep",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -121,7 +124,8 @@ namespace EatingMyEmpire.Api.Migrations
                         name: "FK_MenuCourse_SuggestedMenu_SuggestedMenuId",
                         column: x => x.SuggestedMenuId,
                         principalTable: "SuggestedMenu",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -140,17 +144,20 @@ namespace EatingMyEmpire.Api.Migrations
                         name: "FK_RecipeStepIngredient_Ingredient_IngredientId",
                         column: x => x.IngredientId,
                         principalTable: "Ingredient",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeStepIngredient_Recipe_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipe",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeStepIngredient_RecipeStep_RecipeStepId",
                         column: x => x.RecipeStepId,
                         principalTable: "RecipeStep",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,17 +177,20 @@ namespace EatingMyEmpire.Api.Migrations
                         name: "FK_CourseRecipeChoice_MenuCourse_MenuCourseId",
                         column: x => x.MenuCourseId,
                         principalTable: "MenuCourse",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_CourseRecipeChoice_Recipe_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipe",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_CourseRecipeChoice_SuggestedMenu_SuggestedMenuId",
                         column: x => x.SuggestedMenuId,
                         principalTable: "SuggestedMenu",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -209,9 +219,9 @@ namespace EatingMyEmpire.Api.Migrations
                 column: "SuggestedMenuId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RecipeStep_RecipeId",
-                table: "RecipeStep",
-                column: "RecipeId");
+                name: "IX_Recipe_RecipeStepId",
+                table: "Recipe",
+                column: "RecipeStepId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RecipeStepIngredient_IngredientId",
@@ -244,7 +254,7 @@ namespace EatingMyEmpire.Api.Migrations
                 name: "Ingredient");
 
             migrationBuilder.DropTable(
-                name: "RecipeStep");
+                name: "Recipe");
 
             migrationBuilder.DropTable(
                 name: "SuggestedMenu");
@@ -253,7 +263,7 @@ namespace EatingMyEmpire.Api.Migrations
                 name: "IngredientType");
 
             migrationBuilder.DropTable(
-                name: "Recipe");
+                name: "RecipeStep");
 
             migrationBuilder.DropTable(
                 name: "MenuType");

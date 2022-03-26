@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EatingMyEmpire.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220122142125_Added_Recipes")]
-    partial class Added_Recipes
+    [Migration("20220326174455_Fix")]
+    partial class Fix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -125,40 +125,25 @@ namespace EatingMyEmpire.Api.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("PhotoPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RecipeDescription")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RecipeName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RecipeStepId")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.ToTable("Recipe");
+                    b.HasIndex("RecipeStepId");
 
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            PhotoPath = "images/adobo.jpg",
-                            RecipeDescription = "Philippine's national food",
-                            RecipeName = "Adobo"
-                        },
-                        new
-                        {
-                            id = 2,
-                            PhotoPath = "images/Sizzling-Sisig.jpg",
-                            RecipeDescription = "My Favourite pinoy dish!",
-                            RecipeName = "Sizzling Sisig"
-                        },
-                        new
-                        {
-                            id = 3,
-                            PhotoPath = "images/Chicken-Tikka-Masala.jpg",
-                            RecipeDescription = "England's national food",
-                            RecipeName = "Chicken Tikka Masala"
-                        });
+                    b.ToTable("Recipe");
                 });
 
             modelBuilder.Entity("EatingMyEmpire.Shared.RecipeStep", b =>
@@ -169,14 +154,10 @@ namespace EatingMyEmpire.Api.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Instructions")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
                     b.HasKey("id");
-
-                    b.HasIndex("RecipeId");
 
                     b.ToTable("RecipeStep");
                 });
@@ -276,15 +257,15 @@ namespace EatingMyEmpire.Api.Migrations
                     b.Navigation("SuggestedMenu");
                 });
 
-            modelBuilder.Entity("EatingMyEmpire.Shared.RecipeStep", b =>
+            modelBuilder.Entity("EatingMyEmpire.Shared.Recipe", b =>
                 {
-                    b.HasOne("EatingMyEmpire.Shared.Recipe", "Recipe")
+                    b.HasOne("EatingMyEmpire.Shared.RecipeStep", "RecipeStep")
                         .WithMany()
-                        .HasForeignKey("RecipeId")
+                        .HasForeignKey("RecipeStepId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Recipe");
+                    b.Navigation("RecipeStep");
                 });
 
             modelBuilder.Entity("EatingMyEmpire.Shared.RecipeStepIngredient", b =>
