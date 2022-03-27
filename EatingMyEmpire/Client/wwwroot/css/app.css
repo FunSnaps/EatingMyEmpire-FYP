@@ -4,6 +4,10 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.HideFooter {
+  display: none;
+}
+
 a, .btn-link {
     color: #0366d6;
 }
@@ -48,3 +52,5 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+

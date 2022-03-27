@@ -28,10 +28,5 @@ namespace EatingMyEmpire.Shared
 
         [ForeignKey("RecipeStepId")]
         public RecipeStep RecipeStep { get; set; }
-
-        /*public int PhotoId { get; set; }
-
-        [ForeignKey("PhotoId")]
-        public Photo Photo { get; set; }*/
     }
 }

@@ -12,6 +12,12 @@ namespace EatingMyEmpire.Client.Pages
     {
         public Recipe Recipe { get; set; } = new Recipe();
 
+        protected string Coordinates { get; set; }
+
+        protected string ButtonText { get; set; } = "Hide Footer";
+
+        protected string CssClass { get; set; } = null;
+
         public RecipeStep RecipeStep { get; set; } = new RecipeStep();
 
         [Inject]
@@ -22,8 +28,21 @@ namespace EatingMyEmpire.Client.Pages
 
         protected async override Task OnInitializedAsync()
         {
-           id = id ?? "1008";
            Recipe = await RecipeService.GetRecipe(int.Parse(id));
+        }
+
+        protected void Button_Click()
+        {
+            if (ButtonText == "Hide Footer")
+            {
+                ButtonText = "Show Footer";
+                CssClass = "HideFooter";
+            }
+            else
+            {
+                CssClass = null;
+                ButtonText = "Hide Footer";
+            }
         }
     }
 }

@@ -1130,6 +1130,7 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\EatingMyEmpire.Client.RazorComponent.input.cache
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\RazorDeclaration\Pages\DisplayRecipe.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\RazorDeclaration\Pages\RecipeDetails.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\RazorDeclaration\Pages\RecipeList.razor.g.cs
@@ -1144,6 +1145,7 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\EatingMyEmpire.Client.RazorCoreGenerate.cache
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\Razor\App.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\Razor\Pages\DisplayRecipe.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\Razor\Pages\RecipeDetails.razor.g.cs
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\Razor\Pages\RecipeList.razor.g.cs

@@ -225,13 +225,13 @@
       "mscorlib.dll": "sha256-CbcIR45\/xUFaZJqGIle6bb7v2kWYjp4kOFpKNnCkd4I=",
       "netstandard.dll": "sha256-qE0Q70OyVlHYY\/Y3nwMjfh+zissea9uhfvWMvPWfI7w=",
       "System.Private.CoreLib.dll": "sha256-pdkcl2+OojCfrhxX5eFmKI30wAmhL6s+sCLp7s175k0=",
-      "EatingMyEmpire.Models.dll": "sha256-lr7OOMWXwMl+JZZF29ot3\/uTjJdxepd96ZLIT746xOU=",
-      "EatingMyEmpire.Client.dll": "sha256-FVHF58bAWSEImJRb9ryTrk\/nBg75W9E4dFv4DFiYaxA="
+      "EatingMyEmpire.Models.dll": "sha256-ud6aYAS3TAc4KlXAlEmxgvnu\/n\/Uka8GCNWLYCFLDcc=",
+      "EatingMyEmpire.Client.dll": "sha256-wPJx+of+znPDeyoj\/pogNRwUB0r8NUFPazYEFUI+V1s="
     },
     "lazyAssembly": null,
     "pdb": {
-      "EatingMyEmpire.Models.pdb": "sha256-zSYZDeZPWg5rlCtrEIxob9vUKZSOjVutYuPiZ1VBdtY=",
-      "EatingMyEmpire.Client.pdb": "sha256-MwguGFO42uXucS2RXqd11cX+v0afQNaby2a2xpepPb4="
+      "EatingMyEmpire.Models.pdb": "sha256-OlJbxrIWN19MhuWFbslmMc6+3\/wxdjXcVkQVRO2J3AA=",
+      "EatingMyEmpire.Client.pdb": "sha256-R3hoJ92SGgBIrIr6wGWSb7CLDz\/GJDAyzEWRCLcWYIs="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ootDKSA6cNAbgJLmPhrHsPVvVqkGEYdRZxucC22LWjw=",

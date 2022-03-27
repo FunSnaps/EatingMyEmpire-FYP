@@ -14,6 +14,8 @@ namespace EatingMyEmpire.Client.Pages
         [Inject]
         public IRecipeService RecipeService { get; set; }
 
+        public bool ShowFooter { get; set; } = true;
+
         public IEnumerable<Recipe> Recipes { get; set; }
 
         protected override async Task OnInitializedAsync()
