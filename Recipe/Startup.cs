@@ -30,6 +30,7 @@ namespace Recipe
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
             services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.AddScoped<IRecipeStepRepository, RecipeStepRepository>();
             services.AddControllers();
 
             services.AddCors(options =>

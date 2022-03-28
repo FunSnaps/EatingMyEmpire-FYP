@@ -1,0 +1,59 @@
+﻿@page "/editrecipe/{id}"
+
+@inherits EditRecipeBase
+
+<EditForm Model="@Recipe">
+  <h3>Edit recipe</h3>
+  <hr />
+  <div class="form-group row">
+    <label for="RecipeName" class="col-sm-2 col-form-label">
+      Recipe Name
+    </label>
+    <div class="col-sm-10">
+      <InputText id="RecipeName" class="form-control" placeholder="Recipe name" @bind-Value="Recipe.RecipeName" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="RecipeDescription" class="col-sm-2 col-form-label">
+      Description
+    </label>
+    <div class="col-sm-10">
+      <InputTextArea id="RecipeDescription" class="form-control" placeholder="Recipe description" @bind-Value="Recipe.RecipeDescription" />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="RecipeDescription" class="col-sm-2 col-form-label">
+      Recipe type
+    </label>
+    <div class="col-sm-10">
+      <InputSelect @bind-Value="Recipe.CourseType">
+        @foreach (var coursetype in Enum.GetValues(typeof(CourseType)))
+{
+<option value="@coursetype">@coursetype</option>
+}
+      </InputSelect>
+    </div>
+  </div>
+</EditForm>
+
+
+
+<EditForm Model="@RecipeStep">
+  <div class="form-group row">
+    <label for="RecipeIngredients" class="col-sm-2 col-form-label">
+      Ingredients
+    </label>
+    <div class="col-sm-10">
+      <InputTextArea id="RecipeIngredients" class="form-control" placeholder="Ingredients" @bind-Value="RecipeStep.Ingredients" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="RecipeInstructions" class="col-sm-2 col-form-label">
+      Instructions
+    </label>
+    <div class="col-sm-10">
+      <InputTextArea id="RecipeInstructions" class="form-control" placeholder="Instructions" @bind-Value="RecipeStep.Instructions" />
+    </div>
+  </div>
+</EditForm>

@@ -1,5 +1,4 @@
 ﻿@page "/recipedetails/{id}"
-@page "/recipedetails"
 @inherits RecipeDetailsBase
 <h3>Recipe Details</h3>
 
@@ -21,10 +20,13 @@ else
 
           <h5>@Recipe.RecipeDescription</h5>
 
-          <p class="text-left font-italic">Ingredients</p>
+          <p class="text-left font-italic">Recipe type:</p>
+          <p class="text-left">@Recipe.CourseType</p>
+
+          <p class="text-left font-italic">Ingredients:</p>
           <p class="text-left">@(Recipe.RecipeStep == null ? "N/A" : Recipe.RecipeStep.Ingredients)</p>
 
-          <p class="text-left font-italic">Instructions</p>
+          <p class="text-left font-italic">Instructions:</p>
           <p class="text-left">@(Recipe.RecipeStep == null ? "N/A" : Recipe.RecipeStep.Instructions)</p>
 
           <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>

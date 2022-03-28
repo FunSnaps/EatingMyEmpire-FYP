@@ -19,5 +19,15 @@ namespace EatingMyEmpire.Shared
 
         [Required]
         public string Instructions { get; set; }
+
+        public static implicit operator RecipeStep(List<RecipeStep> v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static implicit operator List<object>(RecipeStep v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

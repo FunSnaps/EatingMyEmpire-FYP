@@ -12,3 +12,4 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\ref\EatingMyEmpire.Models.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.pdb
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.genruntimeconfig.cache
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Shared\obj\Debug\net5.0\EatingMyEmpire.Models.csproj.AssemblyReference.cache

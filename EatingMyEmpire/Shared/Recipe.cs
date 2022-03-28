@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EatingMyEmpire.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -20,6 +21,9 @@ namespace EatingMyEmpire.Shared
 
         [Required]
         public string RecipeDescription { get; set; }
+
+        [Required]
+        public CourseType CourseType { get; set; }
 
         public int RecipeStepId { get; set; }
 

@@ -82,8 +82,14 @@ using EatingMyEmpire.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\_Imports.razor"
+using EatingMyEmpire.Models;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/recipedetails/{id}")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/recipedetails")]
     public partial class RecipeDetails : RecipeDetailsBase
     {
         #pragma warning disable 1998

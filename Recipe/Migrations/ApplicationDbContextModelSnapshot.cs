@@ -18,109 +18,15 @@ namespace EatingMyEmpire.Api.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EatingMyEmpire.Shared.CourseRecipeChoice", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("MenuCourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SuggestedMenuId")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("MenuCourseId");
-
-                    b.HasIndex("RecipeId");
-
-                    b.HasIndex("SuggestedMenuId");
-
-                    b.ToTable("CourseRecipeChoice");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.Ingredient", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("IngredientTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("IngredientTypeId");
-
-                    b.ToTable("Ingredient");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.IngredientType", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("IngredientType");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.MenuCourse", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CourseName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SuggestedMenuId")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("SuggestedMenuId");
-
-                    b.ToTable("MenuCourse");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.MenuType", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("MenuTypeDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("MenuType");
-                });
-
             modelBuilder.Entity("EatingMyEmpire.Shared.Recipe", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CourseType")
+                        .HasColumnType("int");
 
                     b.Property<string>("PhotoPath")
                         .IsRequired()
@@ -147,6 +53,7 @@ namespace EatingMyEmpire.Api.Migrations
                         new
                         {
                             id = 1,
+                            CourseType = 0,
                             PhotoPath = "images/adobo.jpg",
                             RecipeDescription = "Chicken Adobo is a type of Filipino chicken stew. Chicken pieces are marinated in soy sauce and spices, pan-fried, and stewed until tender. The dish gained popularity because of its delicious taste and ease in preparation.",
                             RecipeName = "Adobo",
@@ -155,6 +62,7 @@ namespace EatingMyEmpire.Api.Migrations
                         new
                         {
                             id = 2,
+                            CourseType = 0,
                             PhotoPath = "images/Sizzling-Sisig.jpg",
                             RecipeDescription = "Sizzling Crispy Sisig is a great dish to prepare during Christmas dinner or in any special occasion. It has a nice texture and the flavor is out-of-this-world. I enjoy having it for dinner with a cup of white rice. It can also be served as an appetizer along with a cold bottle or glass of your favorite drink.",
                             RecipeName = "Sizzling Sisig",
@@ -163,6 +71,7 @@ namespace EatingMyEmpire.Api.Migrations
                         new
                         {
                             id = 3,
+                            CourseType = 0,
                             PhotoPath = "images/Chicken-Tikka-Masala.jpg",
                             RecipeDescription = "This rich and creamy flavoursome Chicken tikka rivals any Indian restaurant! Why go out when you can make it better at home! With aromatic golden chicken pieces swimming in an incredible curry sauce, this Chicken Tikka Masala recipe is one of the best you will try! Pair it with our buttery garlic naan breads!",
                             RecipeName = "Chicken Tikka Masala",
@@ -210,101 +119,6 @@ namespace EatingMyEmpire.Api.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EatingMyEmpire.Shared.RecipeStepIngredient", b =>
-                {
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeStepId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IngredientId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AmountRequired")
-                        .HasColumnType("int");
-
-                    b.HasKey("RecipeId", "RecipeStepId", "IngredientId");
-
-                    b.HasIndex("IngredientId");
-
-                    b.HasIndex("RecipeStepId");
-
-                    b.ToTable("RecipeStepIngredient");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.SuggestedMenu", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("MenuDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MenuName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MenuTypeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("MenuTypeId");
-
-                    b.ToTable("SuggestedMenu");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.CourseRecipeChoice", b =>
-                {
-                    b.HasOne("EatingMyEmpire.Shared.MenuCourse", "MenuCourse")
-                        .WithMany()
-                        .HasForeignKey("MenuCourseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("EatingMyEmpire.Shared.Recipe", "Recipe")
-                        .WithMany()
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("EatingMyEmpire.Shared.SuggestedMenu", "SuggestedMenu")
-                        .WithMany()
-                        .HasForeignKey("SuggestedMenuId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("MenuCourse");
-
-                    b.Navigation("Recipe");
-
-                    b.Navigation("SuggestedMenu");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.Ingredient", b =>
-                {
-                    b.HasOne("EatingMyEmpire.Shared.IngredientType", "IngredientType")
-                        .WithMany()
-                        .HasForeignKey("IngredientTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("IngredientType");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.MenuCourse", b =>
-                {
-                    b.HasOne("EatingMyEmpire.Shared.SuggestedMenu", "SuggestedMenu")
-                        .WithMany()
-                        .HasForeignKey("SuggestedMenuId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("SuggestedMenu");
-                });
-
             modelBuilder.Entity("EatingMyEmpire.Shared.Recipe", b =>
                 {
                     b.HasOne("EatingMyEmpire.Shared.RecipeStep", "RecipeStep")
@@ -314,44 +128,6 @@ namespace EatingMyEmpire.Api.Migrations
                         .IsRequired();
 
                     b.Navigation("RecipeStep");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.RecipeStepIngredient", b =>
-                {
-                    b.HasOne("EatingMyEmpire.Shared.Ingredient", "Ingredient")
-                        .WithMany()
-                        .HasForeignKey("IngredientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("EatingMyEmpire.Shared.Recipe", "Recipe")
-                        .WithMany()
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("EatingMyEmpire.Shared.RecipeStep", "RecipeStep")
-                        .WithMany()
-                        .HasForeignKey("RecipeStepId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Ingredient");
-
-                    b.Navigation("Recipe");
-
-                    b.Navigation("RecipeStep");
-                });
-
-            modelBuilder.Entity("EatingMyEmpire.Shared.SuggestedMenu", b =>
-                {
-                    b.HasOne("EatingMyEmpire.Shared.MenuType", "MenuType")
-                        .WithMany()
-                        .HasForeignKey("MenuTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("MenuType");
                 });
 #pragma warning restore 612, 618
         }

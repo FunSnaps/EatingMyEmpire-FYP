@@ -9,7 +9,7 @@ namespace EatingMyEmpire.Api.Models
 {
     public class RecipeRepository : IRecipeRepository
     {
-        private ApplicationDbContext applicationDbContext;
+        private readonly ApplicationDbContext applicationDbContext;
 
         public RecipeRepository(ApplicationDbContext applicationDbContext)
         {
@@ -69,7 +69,6 @@ namespace EatingMyEmpire.Api.Models
         public async Task<IEnumerable<Shared.Recipe>> GetRecipes()
         {
             return await applicationDbContext.Recipe.ToListAsync();
-
         }
 
         public async Task<IEnumerable<Shared.Recipe>> Search(string RecipeName, string RecipeDescription)
