@@ -1,3 +1,4 @@
+using EatingMyEmpire.Client.Pages.Models;
 using EatingMyEmpire.Client.Services;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,8 @@ namespace EatingMyEmpire.Client
             builder.Services.AddScoped<IRecipeService, RecipeService>();
 
             builder.Services.AddScoped<IRecipeStepService, RecipeStepService>();
+
+            builder.Services.AddAutoMapper(typeof(RecipeProfile));
 
             await builder.Build().RunAsync();
         }

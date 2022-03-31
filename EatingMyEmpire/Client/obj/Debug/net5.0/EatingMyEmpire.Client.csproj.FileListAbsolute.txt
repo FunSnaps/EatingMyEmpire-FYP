@@ -1180,15 +1180,12 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\3Q6Jf7+X.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\3bJx0nyE.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\T8vK1JyL.gz
-E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\1alvgz+n.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\nPfb20hb.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\1GZRLVG6.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\TDxcev7c.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\S0pZ4aip.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\EF28MH2S.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\xBl48hfo.gz
-E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\Kd0LsxYL.gz
-E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\KE2qCsyj.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\GBv2p51E.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\cH8TpLWj.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\4ej0GnMF.gz
@@ -1307,7 +1304,6 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\EeHQBO7L.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\zon96Zrt.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\z+S+rkTc.gz
-E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\TJvZHZ47.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\XOazLms7.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\c1mAapA+.gz
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\QV7+oPW+.gz
@@ -1392,3 +1388,13 @@ E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\n
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\EatingMyEmpire.Client.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\ref\EatingMyEmpire.Client.dll
 E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\EatingMyEmpire.Client.pdb
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\bin\Debug\net5.0\wwwroot\_framework\AutoMapper.dll.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\bin\Debug\net5.0\wwwroot\_framework\AutoMapper.Extensions.Microsoft.DependencyInjection.dll.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\bin\Debug\net5.0\wwwroot\_framework\AutoMapper.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\bin\Debug\net5.0\wwwroot\_framework\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\JNoGDXhP.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\tJ351VgX.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\7wpbBpB4.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\bg3YANc2.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\SXSHuCiK.gz
+E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\obj\Debug\net5.0\build-gz\KVVxifSB.gz

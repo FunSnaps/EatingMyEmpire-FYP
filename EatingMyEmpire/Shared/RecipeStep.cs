@@ -13,21 +13,13 @@ namespace EatingMyEmpire.Shared
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
-        
-        [Required]
-        public string Ingredients { get; set; } 
 
-        [Required]
+        [Required(ErrorMessage = "Ingredients field must be provided with a minumum of 16 characters!")]
+        [MinLength(16)]
+        public string Ingredients { get; set; }
+
+        [Required(ErrorMessage = "Instructions field must be provided with a minumum of 16 characters!")]
+        [MinLength(16)]
         public string Instructions { get; set; }
-
-        public static implicit operator RecipeStep(List<RecipeStep> v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static implicit operator List<object>(RecipeStep v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

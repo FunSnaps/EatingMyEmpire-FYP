@@ -61,7 +61,7 @@ namespace EatingMyEmpire.Api.Controllers
 
                 if (result.Any())
                 {
-                    return Ok(result );
+                    return Ok(result);
                 }
 
                 return NotFound("This recipe does not exist!");
@@ -91,10 +91,10 @@ namespace EatingMyEmpire.Api.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var createdRecipe = await recipeRepository.AddRecipe(recipe);
+                var createdRecipe = await recipeRepository.CreateRecipe(recipe);
 
                 //Anonymous object
-                return CreatedAtAction(nameof(GetRecipe), new { id = createdRecipe.id}, createdRecipe);
+                return CreatedAtAction(nameof(GetRecipe), new { id = createdRecipe.id }, createdRecipe);
             }
             catch (Exception)
             {
@@ -106,23 +106,20 @@ namespace EatingMyEmpire.Api.Controllers
         public async Task<ActionResult<Shared.Recipe>> UpdateRecipe(int id, Shared.Recipe recipe)
         {
             try
-            { 
+            {
                 if (id != recipe.id)
                 {
-                    return BadRequest("Recipe ID mismatch!");
+                    return BadRequest("Recipe id mismatch!");
                 }
-
-                var recipeToUpdate = await recipeRepository.GetRecipe(id);
+                var recipeToUpdate = await recipeRepository.GetRecipe(recipe.id);
 
                 if (recipeToUpdate == null)
                 {
-                    return NotFound($"Recipe with ID: {id} was not found!");
+                    return NotFound($"Recipe with ID: {recipe.id} was not found!");
                 }
-                else
-                {
-                    return await recipeRepository.UpdateRecipe(recipe);
-                }
-                
+
+                return await recipeRepository.UpdateRecipe(recipe);
+
             }
             catch (Exception)
             {

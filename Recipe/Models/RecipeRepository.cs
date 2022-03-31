@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace EatingMyEmpire.Api.Models
 {
+
     public class RecipeRepository : IRecipeRepository
     {
         private readonly ApplicationDbContext applicationDbContext;
@@ -16,16 +17,18 @@ namespace EatingMyEmpire.Api.Models
             this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<Shared.Recipe> AddRecipe(Shared.Recipe recipe)
+        public async Task<Shared.Recipe> CreateRecipe(Shared.Recipe recipe)
         {
             var result = await applicationDbContext.Recipe.AddAsync(recipe);
             await applicationDbContext.SaveChangesAsync();
             return result.Entity;
         }
 
-        public async Task<Shared.Recipe> DeleteRecipe(int RecipeId )
+        public async Task<Shared.Recipe> DeleteRecipe(int RecipeId)
         {
-            var result = await applicationDbContext.Recipe.FirstOrDefaultAsync(e => e.id == RecipeId);
+            var result = await applicationDbContext.Recipe
+                .Include(e => e.RecipeStep)
+                .FirstOrDefaultAsync(e => e.id == RecipeId);
 
             if (result != null)
             {
@@ -51,14 +54,19 @@ namespace EatingMyEmpire.Api.Models
 
         public async Task<Shared.Recipe> UpdateRecipe(Shared.Recipe recipe)
         {
-            var result = await applicationDbContext.Recipe.FirstOrDefaultAsync(e => e.id == recipe.id);
+            var result = await applicationDbContext.Recipe
+                .Include(e => e.RecipeStep)
+                .FirstOrDefaultAsync(e => e.id == recipe.id);
 
             if (result != null)
             {
                 result.RecipeName = recipe.RecipeName;
                 result.RecipeDescription = recipe.RecipeDescription;
                 result.PhotoPath = recipe.PhotoPath;
-
+                result.CourseType = recipe.CourseType;
+                result.RecipeStep.Ingredients = recipe.RecipeStep.Ingredients;
+                result.RecipeStep.Instructions = recipe.RecipeStep.Instructions;        
+               
                 await applicationDbContext.SaveChangesAsync();
 
                 return result;
@@ -68,7 +76,8 @@ namespace EatingMyEmpire.Api.Models
 
         public async Task<IEnumerable<Shared.Recipe>> GetRecipes()
         {
-            return await applicationDbContext.Recipe.ToListAsync();
+            return await applicationDbContext.Recipe
+                .Include(e => e.RecipeStep).ToListAsync();
         }
 
         public async Task<IEnumerable<Shared.Recipe>> Search(string RecipeName, string RecipeDescription)

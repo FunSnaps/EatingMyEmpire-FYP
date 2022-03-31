@@ -1,8 +1,12 @@
 ﻿@page "/editrecipe/{id}"
+@page "/editrecipe"
 
 @inherits EditRecipeBase
 
-<EditForm Model="@Recipe">
+<EditForm Model="@EditRecipeModel" OnSubmit="HandleValidSubmit">
+  <DataAnnotationsValidator />
+    <ValidationSummary/>
+
   <h3>Edit recipe</h3>
   <hr />
   <div class="form-group row">
@@ -10,7 +14,8 @@
       Recipe Name
     </label>
     <div class="col-sm-10">
-      <InputText id="RecipeName" class="form-control" placeholder="Recipe name" @bind-Value="Recipe.RecipeName" />
+      <InputText id="RecipeName" class="form-control" placeholder="Recipe name" @bind-Value="EditRecipeModel.RecipeName" />
+      <ValidationMessage For="@(() => EditRecipeModel.RecipeName)"></ValidationMessage>
     </div>
   </div>
   <div class="form-group row">
@@ -18,34 +23,18 @@
       Description
     </label>
     <div class="col-sm-10">
-      <InputTextArea id="RecipeDescription" class="form-control" placeholder="Recipe description" @bind-Value="Recipe.RecipeDescription" />
+      <InputTextArea id="RecipeDescription" class="form-control" placeholder="Recipe description" @bind-Value="EditRecipeModel.RecipeDescription" />
+      <ValidationMessage For="@(() => EditRecipeModel.RecipeDescription)"></ValidationMessage>
     </div>
   </div>
 
-  <div class="form-group row">
-    <label for="RecipeDescription" class="col-sm-2 col-form-label">
-      Recipe type
-    </label>
-    <div class="col-sm-10">
-      <InputSelect @bind-Value="Recipe.CourseType">
-        @foreach (var coursetype in Enum.GetValues(typeof(CourseType)))
-{
-<option value="@coursetype">@coursetype</option>
-}
-      </InputSelect>
-    </div>
-  </div>
-</EditForm>
-
-
-
-<EditForm Model="@RecipeStep">
   <div class="form-group row">
     <label for="RecipeIngredients" class="col-sm-2 col-form-label">
       Ingredients
     </label>
     <div class="col-sm-10">
       <InputTextArea id="RecipeIngredients" class="form-control" placeholder="Ingredients" @bind-Value="RecipeStep.Ingredients" />
+      <ValidationMessage For="@(() => RecipeStep.Ingredients)"></ValidationMessage>
     </div>
   </div>
   <div class="form-group row">
@@ -54,6 +43,40 @@
     </label>
     <div class="col-sm-10">
       <InputTextArea id="RecipeInstructions" class="form-control" placeholder="Instructions" @bind-Value="RecipeStep.Instructions" />
+      <ValidationMessage For="@(() => RecipeStep.Instructions)"></ValidationMessage>
     </div>
   </div>
+
+  <div class="form-group row">
+    <label for="RecipeType" class="col-sm-2 col-form-label">
+      Recipe type
+    </label>
+    <div class="col-sm-10">
+      <InputSelect @bind-Value="EditRecipeModel.CourseType">
+        @foreach (var coursetype in Enum.GetValues(typeof(CourseType)))
+{
+<option value="@coursetype">@coursetype</option>
+}
+      </InputSelect>
+      <ValidationMessage For="@(() => EditRecipeModel.CourseType)"></ValidationMessage>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="DateAdded" class="col-sm-2 col-form-label">
+      Date added
+    </label>
+    <div class="col-sm-10">
+      <InputDate id="DateAdded" class="form-control" @bind-Value="EditRecipeModel.DateAdded" />
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+  <div class="card-footer text-center">
+    <a href="/" class="btn btn-primary">Back</a>
+  </div>
+
 </EditForm>
+
+

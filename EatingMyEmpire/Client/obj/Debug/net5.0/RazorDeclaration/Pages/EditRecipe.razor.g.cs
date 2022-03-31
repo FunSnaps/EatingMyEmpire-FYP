@@ -90,6 +90,7 @@ using EatingMyEmpire.Models;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/editrecipe/{id}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/editrecipe")]
     public partial class EditRecipe : EditRecipeBase
     {
         #pragma warning disable 1998

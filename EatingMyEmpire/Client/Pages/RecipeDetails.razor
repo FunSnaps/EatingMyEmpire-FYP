@@ -12,29 +12,32 @@ else
     <div class="col-sm-8">
       <div class="card">
         <div class="card-header">
-          <h1>@Recipe.RecipeName @Coordinates</h1>
+          <h1 class="text-center">@Recipe.RecipeName @Coordinates</h1>
+          <p class="text-center">@Recipe.CourseType</p>
         </div>
 
         <div class="card-body text-center">
           <img class="card-img-top" @onmousemove="@(e => Coordinates = $"X = {e.ClientX} Y = {e.ClientY}")" src="@Recipe.PhotoPath" />
 
-          <h5>@Recipe.RecipeDescription</h5>
-
-          <p class="text-left font-italic">Recipe type:</p>
-          <p class="text-left">@Recipe.CourseType</p>
-
-          <p class="text-left font-italic">Ingredients:</p>
-          <p class="text-left">@(Recipe.RecipeStep == null ? "N/A" : Recipe.RecipeStep.Ingredients)</p>
+          <h5 class="text-center">@Recipe.RecipeDescription</h5>
 
           <p class="text-left font-italic">Instructions:</p>
           <p class="text-left">@(Recipe.RecipeStep == null ? "N/A" : Recipe.RecipeStep.Instructions)</p>
 
-          <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>
+          <p class="text-left font-italic">Ingredients:</p>
+          <p class="text-left">@(Recipe.RecipeStep == null ? "N/A" : Recipe.RecipeStep.Ingredients)</p>
 
+          <p class="text-left font-italic">Recipe type:</p>
+          <span class="text-left">@Recipe.CourseType</span>
+
+          <p class="text-left font-italic">Date added:</p>
+          <span class="text-left">@(Recipe.RecipeStep == null ? "N/A" : Recipe.DateAdded)</span>
+          <hr />
+          <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>
         </div>
         <div class="card-footer text-center @CssClass">
           <a href="/" class="btn btn-primary">Back</a>
-          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="@($"/editrecipe/{Recipe.id}")" class="btn btn-primary m-1">Edit</a>
           <a href="#" class="btn btn-danger">Delete</a>
         </div>
       </div>

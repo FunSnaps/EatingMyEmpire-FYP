@@ -15,14 +15,17 @@ namespace EatingMyEmpire.Shared
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="A recipe name must be provided!")]
         [MinLength(3)]
         public string RecipeName { get; set; }
 
-        [Required]
+        public DateTime DateAdded { get; set; } = DateTime.UtcNow;
+
+        [Required(ErrorMessage = "A description must be provided with a minumum of 8 characters!")]
+        [MinLength(8)]
         public string RecipeDescription { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A course type must be provided!")]
         public CourseType CourseType { get; set; }
 
         public int RecipeStepId { get; set; }

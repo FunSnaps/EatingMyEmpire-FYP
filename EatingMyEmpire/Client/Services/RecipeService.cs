@@ -17,6 +17,15 @@ namespace EatingMyEmpire.Client.Services
             this.httpClient = httpClient;
         }
 
+        public Recipe Recipe { get; set; } = new Recipe();
+
+        public async Task<Recipe> CreateRecipe(Recipe newRecipe)
+        {
+            var result = await httpClient.PostAsJsonAsync("api/recipe", newRecipe);
+            Recipe = await result.Content.ReadFromJsonAsync<Recipe>();
+            return Recipe;
+        }
+
         public async Task<Recipe> GetRecipe(int id)
         {
             return await httpClient.GetFromJsonAsync<Recipe>($"api/recipe/{id}");
@@ -26,5 +35,13 @@ namespace EatingMyEmpire.Client.Services
         {         
             return await httpClient.GetFromJsonAsync<Recipe[]>("api/recipe");
         }
+
+        public async Task<Recipe> UpdateRecipe(Recipe updatedRecipe, int id)
+        {
+            var result = await httpClient.PutAsJsonAsync($"api/recipe/{id}", updatedRecipe);
+            Recipe = await result.Content.ReadFromJsonAsync<Recipe>();
+            return Recipe;
+        }
     }
 }
+
