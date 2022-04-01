@@ -13,13 +13,13 @@
       </NavLink>
     </li>
     <li class="nav-item px-3">
-      <NavLink class="nav-link" href="counter">
-        <span class="oi oi-plus" aria-hidden="true"></span> Counter
+      <NavLink class="nav-link" href="/editrecipe" @onclick="HandleClick">
+        <span class="oi oi-file" aria-hidden="true"></span> Create
       </NavLink>
     </li>
     <li class="nav-item px-3">
-      <NavLink class="nav-link" href="/editrecipe">
-        <span class="oi oi-file" aria-hidden="true"></span> Create
+      <NavLink class="nav-link" href="counter">
+        <span class="oi oi-plus" aria-hidden="true"></span> Counter
       </NavLink>
     </li>
   </ul>
@@ -30,8 +30,15 @@
 
   private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-  private void ToggleNavMenu()
-  {
-    collapseNavMenu = !collapseNavMenu;
-  }
+  @inject NavigationManager NavigationManager; 
+
+    private void HandleClick()
+    {
+      NavigationManager.NavigateTo("editrecipe", true);
+    }
+
+    private void ToggleNavMenu()
+    {
+      collapseNavMenu = !collapseNavMenu;
+    }
 }

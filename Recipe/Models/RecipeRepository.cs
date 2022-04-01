@@ -49,7 +49,7 @@ namespace EatingMyEmpire.Api.Models
 
         public async Task<Shared.Recipe> GetRecipeByName(string RecipeName)
         {
-            return await applicationDbContext.Recipe.FirstOrDefaultAsync(e => e.RecipeName == RecipeName);
+            return await applicationDbContext.Recipe.Include(e => e.RecipeStep).FirstOrDefaultAsync(e => e.RecipeName == RecipeName);
         }
 
         public async Task<Shared.Recipe> UpdateRecipe(Shared.Recipe recipe)

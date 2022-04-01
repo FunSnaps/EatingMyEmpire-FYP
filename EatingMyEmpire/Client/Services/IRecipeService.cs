@@ -12,5 +12,7 @@ namespace EatingMyEmpire.Client.Services
         Task<Recipe> GetRecipe(int id);
         Task<Recipe> UpdateRecipe(Recipe updatedRecipe, int id);
         Task<Recipe> CreateRecipe(Recipe newRecipe);
+        Task<Recipe> DeleteRecipe(int id);
+
     }
 }

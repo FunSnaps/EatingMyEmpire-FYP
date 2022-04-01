@@ -228,12 +228,12 @@
       "netstandard.dll": "sha256-qE0Q70OyVlHYY\/Y3nwMjfh+zissea9uhfvWMvPWfI7w=",
       "System.Private.CoreLib.dll": "sha256-pdkcl2+OojCfrhxX5eFmKI30wAmhL6s+sCLp7s175k0=",
       "EatingMyEmpire.Models.dll": "sha256-UoYFuSt2YmZ2jd9OfzCc1UKtWsg9\/QQ54h78nLdUCFA=",
-      "EatingMyEmpire.Client.dll": "sha256-ZmagDEHp5voy8FaPYkVu8KBIOW\/3oaXgcKEFzmFIzbA="
+      "EatingMyEmpire.Client.dll": "sha256-b\/qqqji6ASJqB85uJ+H1lqSB3hSGa2Lfa0ZbVA6Yhv4="
     },
     "lazyAssembly": null,
     "pdb": {
       "EatingMyEmpire.Models.pdb": "sha256-49KuZvs757mNpwwwdNtBSW68NnBbHBjt\/MaQ+3mP2nU=",
-      "EatingMyEmpire.Client.pdb": "sha256-KexV1QRNkMY8QivXHP2qBpo1NMIIrTPAmJ+v7UaLD+0="
+      "EatingMyEmpire.Client.pdb": "sha256-ihXcc7Q329Ql1aSiOjb3fNw2O2R50TRWsfF6+FngW5w="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ootDKSA6cNAbgJLmPhrHsPVvVqkGEYdRZxucC22LWjw=",

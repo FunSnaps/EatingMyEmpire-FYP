@@ -26,13 +26,20 @@ namespace EatingMyEmpire.Client.Services
             return Recipe;
         }
 
+        public async Task<Recipe> DeleteRecipe(int id)
+        {
+            var result = await httpClient.DeleteAsync($"api/recipe/{id}");
+            Recipe = await result.Content.ReadFromJsonAsync<Recipe>();
+            return Recipe;
+        }
+
         public async Task<Recipe> GetRecipe(int id)
         {
             return await httpClient.GetFromJsonAsync<Recipe>($"api/recipe/{id}");
         }
 
         public async Task<IEnumerable<Recipe>> GetRecipes()
-        {         
+        {
             return await httpClient.GetFromJsonAsync<Recipe[]>("api/recipe");
         }
 

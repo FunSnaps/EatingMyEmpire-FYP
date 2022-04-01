@@ -32,33 +32,42 @@ namespace EatingMyEmpire.Client.Pages
 
         /*public List<Recipe> Recipes { get; set; } = new List<Recipe>();*/
 
-        public EditRecipeModel EditRecipeModel { get; set; } = new EditRecipeModel(); 
+        public EditRecipeModel EditRecipeModel { get; set; } = new EditRecipeModel();
+
+        public string PageHeaderText { get; set; }
 
         [Parameter]
-        public string id { get; set; }
+        public string Id { get; set; }
  
         protected async override Task OnInitializedAsync()
         {
-            int.TryParse(id, out int recipeId);
+            System.Diagnostics.Debug.WriteLine(Id, "HERE:");
+
+            int.TryParse(Id, out int recipeId);
 
             if (recipeId != 0)
             {
-                Recipe = await RecipeService.GetRecipe(int.Parse(id));
+                PageHeaderText = "Edit Recipe";
+                Recipe = await RecipeService.GetRecipe(int.Parse(Id));
+                RecipeStep = await RecipeStepService.GetRecipeStep(Recipe.RecipeStepId);
             }
             else
             {
+                PageHeaderText = "Create Recipe";
+
+                RecipeStep = new RecipeStep();
+
                 Recipe = new Recipe
                 {
-                    RecipeStepId = 1001,
+                    RecipeName = "Empty plate",
                     DateAdded = DateTime.UtcNow,
+                    RecipeDescription = "N/A",
+                    CourseType = 0,
+                    RecipeStep = RecipeStep,
                     PhotoPath = "images/nophoto.jpg"
                 };
-            }
-
-            Recipe = await RecipeService.GetRecipe(int.Parse(id));
+            }    
             /*Recipes = (await RecipeService.GetRecipes()).ToList();*/
-
-            RecipeStep = await RecipeStepService.GetRecipeStep(int.Parse(id));
             /*RecipeSteps = (await RecipeStepService.GetRecipeSteps()).ToList();*/
             
             Mapper.Map(Recipe, EditRecipeModel);
@@ -76,7 +85,6 @@ namespace EatingMyEmpire.Client.Pages
             if (Recipe.id != 0)
             {
                 result = await RecipeService.UpdateRecipe(Recipe, Recipe.id);
-
             }
             else
             {
@@ -88,6 +96,12 @@ namespace EatingMyEmpire.Client.Pages
             {
                 NavigationManager.NavigateTo("/");
             }
+        }
+
+        protected async Task Delete_Click()
+        {
+            await RecipeService.DeleteRecipe(Recipe.id);
+            NavigationManager.NavigateTo("/");
         }
     }
 }

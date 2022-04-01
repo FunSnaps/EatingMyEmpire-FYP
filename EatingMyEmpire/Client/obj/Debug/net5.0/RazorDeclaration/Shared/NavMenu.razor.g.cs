@@ -103,14 +103,28 @@ using EatingMyEmpire.Models;
 
   private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-  private void ToggleNavMenu()
-  {
-    collapseNavMenu = !collapseNavMenu;
-  }
+  
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 34 "E:\Uni\UniDocs\Year3\FYP\WebApp\EatingMyEmpire\EatingMyEmpire\Client\Shared\NavMenu.razor"
+
+    private void HandleClick()
+    {
+      NavigationManager.NavigateTo("editrecipe", true);
+    }
+
+    private void ToggleNavMenu()
+    {
+      collapseNavMenu = !collapseNavMenu;
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591
