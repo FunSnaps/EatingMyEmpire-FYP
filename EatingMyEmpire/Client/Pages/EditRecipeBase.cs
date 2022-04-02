@@ -36,13 +36,13 @@ namespace EatingMyEmpire.Client.Pages
 
         public string PageHeaderText { get; set; }
 
+        protected Components.ConfirmBase DeleteConfirmation { get; set; }
+
         [Parameter]
         public string Id { get; set; }
  
         protected async override Task OnInitializedAsync()
         {
-            System.Diagnostics.Debug.WriteLine(Id, "HERE:");
-
             int.TryParse(Id, out int recipeId);
 
             if (recipeId != 0)
@@ -98,10 +98,27 @@ namespace EatingMyEmpire.Client.Pages
             }
         }
 
-        protected async Task Delete_Click()
+        /* protected async Task Delete_Click()
+         {
+             await RecipeService.DeleteRecipe(Recipe.id);
+             NavigationManager.NavigateTo("/");
+         }*/
+
+        protected async Task ConfirmDelete_Click(bool deleteConfirmed)
         {
-            await RecipeService.DeleteRecipe(Recipe.id);
-            NavigationManager.NavigateTo("/");
+            if (deleteConfirmed)
+            {
+                await RecipeService.DeleteRecipe(Recipe.id);
+                NavigationManager.NavigateTo("/");
+            }
+        }
+
+        protected void Delete_Click()
+        {
+            /*await RecipeService.DeleteRecipe(Recipe.id);
+            NavigationManager.NavigateTo("/");*/
+
+            DeleteConfirmation.Show();
         }
     }
 }

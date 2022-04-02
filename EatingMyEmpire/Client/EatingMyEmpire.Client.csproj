@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\EatingMyEmpire.Components\EatingMyEmpire.Components.csproj" />
     <ProjectReference Include="..\Shared\EatingMyEmpire.Models.csproj" />
   </ItemGroup>
 
